@@ -1,0 +1,99 @@
+@media only screen and (max-width: 768px) {
+  section {
+    height: max-content;
+    min-height: 0;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  .parent {
+    scroll-snap-type: none;
+    padding: 0 5%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .heading1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section__header {
+    text-align: center;
+  }
+
+  #about {
+    display: block;
+    text-align: center;
+  }
+
+  .hero__section1 {
+    width: 100%;
+    justify-content: start;
+    padding: 0;
+  }
+
+  .hero__section2 {
+    display: none;
+  }
+
+  .hero__section2mobile {
+    display: block;
+    height: 50%;
+  }
+
+  .work__item {
+    width: 100%;
+  }
+
+  #education {
+    flex-direction: column;
+  }
+
+  .education__education_list {
+    width: 100%;
+  }
+
+  #contact {
+    margin-bottom: 75px;
+  }
+
+  .contact__container {
+    flex-direction: column;
+  }
+
+  .contact__socmed_container {
+    display: none;
+  }
+
+  .contact__form {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 5px 0 5px;
+  }
+
+  .contact__socmed_list {
+    flex-direction: row;
+  }
+
+  .contact__socmed_icon {
+    width: 8px;
+    height: 8px;
+    color: #e7f6f2;
+  }
+
+  .contact__socmed_mobile {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .tab_bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

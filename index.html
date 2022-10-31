@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/utilities.css" />
+    <link rel="stylesheet" href="styles/mobile-screen.css" />
+
+    <!-- External link -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="topnav">
+      <div class="topnav__logo">
+        <a class="text-none text-black" href="#about">a.3.3.a.r</a>
+      </div>
+      <div class="topnav__item_list">
+        <a class="topnav__item" href="#about">About</a>
+        <a class="topnav__item" href="#skill">Skills</a>
+        <a class="topnav__item" href="#work">Works</a>
+        <a class="topnav__item" href="#education">Education</a>
+        <a class="topnav__item" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="parent">
+      <!-- Hero Section -->
+      <section id="about" style="padding: 0px; height: 100vh" dir="ltr">
+        <div class="hero__section2mobile">
+          <img
+            src="assets/img/self-image.png"
+            alt="ammar"
+            style="height: 90%"
+          />
+        </div>
+        <div class="hero__section1">
+          <h1 class="title m-0">
+            Hi! I Am <br />
+            Ammar
+          </h1>
+          <p class="text-primary">
+            Frontend web/app developer, has been developing <br />
+            for over
+            <span class="bg-primary italic text-white">1 year</span>
+          </p>
+          <div>
+            <button class="btn btn-lg btn-primary mt-5">
+              <a href="#skill" class="text-none text-white">Discover me</a>
+            </button>
+          </div>
+        </div>
+        <div class="hero__section2">
+          <img
+            src="assets/img/self-image.png"
+            alt="ammar"
+            style="height: 90%"
+          />
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skill" dir="ltr">
+        <div class="section__header">
+          <h1 class="heading1 m-0">
+            <i class="fa-solid fa-user-gear"></i> Skills
+          </h1>
+          <p class="text-primary">
+            These are the skills I acquired throughout my devoloping experience.
+          </p>
+        </div>
+        <div class="skill__item_list">
+          <div class="skill__item">
+            <h3>Programming Language</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Git</li>
+              <li>React.js</li>
+              <li>Vue.js</li>
+              <li>Next.js</li>
+              <li>Typescript</li>
+              <li>TailwindCSS</li>
+              <li>Ionic Framework</li>
+            </ul>
+          </div>
+          <div class="skill__item">
+            <h3>Software</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Microsoft Office</li>
+              <li>Microsoft Word</li>
+              <li>Microsoft Excel</li>
+              <li>Microsoft Powerpoint</li>
+              <li>Microsoft OneNote</li>
+              <li>GIMP</li>
+              <li>Visual Studio Code</li>
+              <li>Final Cut Pro X</li>
+              <li>Postman</li>
+            </ul>
+          </div>
+          <div class="skill__item">
+            <h3>Language</h3>
+            <ul>
+              <li>Bahasa Melayu</li>
+              <li>English</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section id="work" dir="ltr">
+        <div class="section__header">
+          <h1 class="heading1 mb-0">
+            <i class="fa-solid fa-briefcase"></i> Works
+          </h1>
+          <p class="text-primary">Previous works I have done.</p>
+        </div>
+        <div class="work__item_list">
+          <div class="work__item">
+            <a href="https://www.mydesa.my" target="_blank"
+              ><div class="work__overlay mydesa">MyDesa</div></a
+            >
+            <img src="assets/img/MyDesa.png" alt="MyDesa" />
+          </div>
+          <div class="work__item">
+            <a href="https://angkut.asia/vue/#/new-order" target="_blank">
+              <div class="work__overlay fgv">Angkut Asia</div></a
+            >
+            <img src="assets/img/FGV.png" alt="Angkut Asia" />
+          </div>
+          <div class="work__item">
+            <div class="work__overlay ergozy">Ergozy Reminder</div>
+            <img src="assets/img/Ergozy.png" alt="Ergozy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" style="padding: 0px" dir="ltr">
+        <div class="section__header education__header text-center">
+          <h1 class="heading1">
+            <i class="fa-solid fa-graduation-cap"></i> Education
+          </h1>
+        </div>
+        <div class="education__education_list">
+          <div class="education__card_border">
+            <div class="education__card card bg-primary-100">
+              <div class="education__card_header">
+                <h4 class="mb-3 mt-0">
+                  <i class="fa-solid fa-building-columns mr-2 mb-0"></i>
+                  Universiti Pendidikan Sultan Idris
+                </h4>
+                <i>Diploma in Computer Science</i> <br />
+                <i class="text-whitesmoke">2019 - 2021</i>
+              </div>
+
+              <div class="education__card_body bg-primary-100">
+                <p class="m-0">&#10003; Graduated with 3.84 CGPA</p>
+                <p class="m-0">&#10003; 5 Semester Dean List</p>
+              </div>
+            </div>
+          </div>
+          <div class="education__card_border">
+            <div class="education__card card bg-primary-100">
+              <div class="education__card_header">
+                <h4 class="mb-3 mt-0">
+                  <i class="fa-solid fa-school mr-2 mb-0"></i> SM Sains Kubang
+                  Pasu
+                </h4>
+                <i>Science Stream</i><br />
+                <i class="text-whitesmoke">2014 - 2018</i>
+              </div>
+              <div class="education__card_body bg-primary-100">
+                <p class="m-0">&#10003; SPM: 2A+ 5A</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="section__header">
+          <h1 class="heading1"><i class="fa-solid fa-headset"></i> Contact</h1>
+        </div>
+        <div class="contact__container">
+          <div class="contact__socmed_container">
+            <div class="contact__socmed_list">
+              <a href="https://www.instagram.com/a.3.3.a.r/" target="_blank">
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_overlay"></div>
+                  <div class="contact__socmed_icon bg-primary-100">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <p class="m-0">Instagram</p>
+                </div></a
+              >
+              <a
+                href="https://www.facebook.com/profile.php?id=100005449501632"
+                target="_blank"
+              >
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_overlay"></div>
+                  <div class="contact__socmed_icon bg-primary-100">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                  <p class="m-0">Facebook</p>
+                </div></a
+              >
+              <a href="https://github.com/a33ar75" target="_blank">
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_overlay"></div>
+                  <div class="contact__socmed_icon bg-primary-100">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <p class="m-0">GitHub</p>
+                </div></a
+              >
+              <a
+                href="https://www.linkedin.com/in/muhammad-ammar-adnan"
+                target="_blank"
+              >
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_overlay"></div>
+                  <div class="contact__socmed_icon bg-primary-100">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <p class="m-0">LinkedIn</p>
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="contact__form bg-primary-100">
+            <h1 class="m-0 text-primary">Contact Me</h1>
+            <form action="">
+              <div class="flex flex-row my-3 gap-3">
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="First Name"
+                  class="w-1/2"
+                />
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Last Name"
+                  class="w-1/2"
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="mb-3"
+              />
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                class="mb-3"
+              ></textarea>
+              <button class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane mr-1"></i> Submit
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__socmed_mobile">
+            <div class="contact__socmed_list">
+              <a href="https://www.instagram.com/a.3.3.a.r/" target="_blank">
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_icon bg-primary">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div></div
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100005449501632"
+                target="_blank"
+              >
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_icon bg-primary">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div></div
+              ></a>
+              <a href="https://github.com/a33ar75" target="_blank">
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_icon bg-primary">
+                    <i class="fa-brands fa-github"></i>
+                  </div></div
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/muhammad-ammar-adnan"
+                target="_blank"
+              >
+                <div class="contact__socmed_item">
+                  <div class="contact__socmed_icon bg-primary">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab Bar -->
+      <footer class="tab_bar">
+        <a href="#about">
+          <div class="tab_bar__item">
+            <i class="fa-solid fa-user"></i></div
+        ></a>
+        <a href="#skill">
+          <div class="tab_bar__item">
+            <i class="fa-solid fa-gears"></i></div
+        ></a>
+        <a href="#work">
+          <div class="tab_bar__item">
+            <i class="fa-solid fa-briefcase"></i></div
+        ></a>
+        <a href="#education">
+          <div class="tab_bar__item">
+            <i class="fa-solid fa-graduation-cap"></i></div
+        ></a>
+        <a href="#contact">
+          <div class="tab_bar__item">
+            <i class="fa-solid fa-headset"></i></div
+        ></a>
+      </footer>
+    </div>
+  </body>
+</html>

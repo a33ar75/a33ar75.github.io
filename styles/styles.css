@@ -1,0 +1,413 @@
+html {
+  padding: 0;
+  margin: 0;
+  background: url(../assets/img/triangle2.svg);
+  color: black;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Rubik";
+  margin: 0;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 50px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a{
+  text-decoration: none;
+}
+
+input, textarea{
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #A5C9CA;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 4px 5px 10px rgb(57, 91, 100, 0.25);
+}
+
+textarea:focus, input:focus{
+  outline: #395B64 1px solid;
+}
+
+textarea:focus-visible, input:focus-visible{
+  outline: #395B64 1px solid;
+}
+
+input::placeholder, textarea::placeholder{
+  color: #395B64;
+}
+
+.parent {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  padding: 0 10%;
+}
+
+.parent::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.parent {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* CSS Menu 
+    1. Typography
+    2. Top Navigation
+    3. Hero Section
+    4. Skill Section
+    5. Work Section
+    6. Education Section
+*/
+
+/* -- Typography -- */
+.title {
+  font-size: 4.5rem;
+}
+
+.heading1 {
+  display: inline-block;
+  font-size: 3rem;
+  border-bottom: #395b64 dashed 2px;
+  padding-bottom: 5px !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* -- Top navigation -- */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20%);
+  margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  z-index: 999;
+}
+
+.topnav__logo {
+  font-size: larger;
+  float: left;
+}
+
+.topnav__item {
+  text-decoration: none;
+  color: black;
+  padding: 0 25px;
+  transition: 0.25s;
+}
+
+.topnav__item:hover {
+  color: #a5c9ca;
+}
+
+/* -- Hero Section -- */
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero__section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0px 50px 0 50px;
+}
+
+.hero__section1 > p > span {
+  padding: 3px 10px;
+  margin: 0 3px;
+  border-radius: 5px;
+  line-height: 5px;
+}
+
+.hero__section1 > p {
+  line-height: 2rem;
+}
+
+.hero__section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  background-color: #e7f6f2;
+  color: black;
+}
+
+.hero__section2mobile {
+  display: none;
+}
+
+/* -- Skills Section -- */
+
+#skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill__item_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.skill__item {
+  width: 300px;
+  max-height: max-content;
+  padding: 10px 20px;
+  margin: 20px 15px;
+  background-color: #e7f6f2;
+  border-left: 2px solid #395b64;
+}
+
+.skill__item > ul {
+  list-style-type: circle;
+  list-style-position: outside;
+}
+
+.skill__item > ul > li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(58, 91, 100, 0.1);
+}
+
+/* -- Works Section -- */
+#work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work__item_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.work__item {
+  position: relative;
+  width: 45%;
+  margin: 25px;
+}
+
+.work__overlay {
+  display: none;
+}
+
+.work__item:hover .work__overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: x-large;
+  transition: 0.3s;
+}
+
+.work__overlay:hover.mydesa {
+  background: rgba(255, 143, 102, 0.8);
+  cursor: pointer;
+}
+
+.work__overlay:hover.fgv {
+  background: rgb(131, 168, 255, 0.8);
+  cursor: pointer;
+}
+
+.work__overlay:hover.ergozy {
+  background: rgba(0, 163, 144, 0.8);
+  cursor: not-allowed;
+}
+
+.work__item img {
+  width: 100%;
+}
+
+/* -- Education Section -- */
+#education{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.education__header{
+  width: 50%;
+}
+
+.education__education_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 2rem;
+  width: 50%;
+}
+
+.education__card_border {
+  border-radius: 8px;
+  border: #A5C9CA 1px dashed;
+  padding: 10px;
+}
+
+.education__card {
+  text-align: center;
+  height: calc(100% - 20px);
+  padding: 0 !important;
+}
+
+.education__card_header{
+  background-color: #395b64;
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.education__card_body{
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* -- Contact Section -- */
+
+.contact__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__socmed_container{
+  width: 50%;
+}
+
+.contact__socmed_list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: max-content;
+}
+
+.contact__socmed_item{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: larger;
+  border-radius: 30px 0 0 30px;
+  color: black;
+}
+
+.contact__socmed_overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  border-radius: 30px 0 0 30px;
+  background-color: #395b64;
+  transition: 0.5s;
+}
+
+.contact__socmed_item:hover .contact__socmed_overlay{
+  width: 300px;
+}
+
+.contact__socmed_item:hover > p{
+  color: white;
+}
+
+.contact__socmed_icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 100%;
+  margin-right: 1rem;
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+}
+
+.contact__socmed_item > p{
+  color: black;
+  z-index: 100;
+}
+
+.contact__form{
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact__form form{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.contact__socmed_mobile {
+  display: none;
+}
+
+/* -- Tab Bar -- */
+.tab_bar{
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  background-color: white;
+  border: 1px dashed #A5C9CA;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.tab_bar > a{
+ color: black;
+}
+
+.tab_bar__item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #E7F6F2;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+}
