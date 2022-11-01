@@ -1,7 +1,53 @@
+:root {
+  /* Light mode */
+  --light-text: black;
+  --light-bg: rgba(247, 247, 247, 0.2);
+  --light-theme: #395B64;
+  --light-bg-blur: rgba(255, 255, 255, 0.05);
+  --light-topnav: white;
+  --light-shadow: rgb(200, 200, 200);
+  --light-icon: '☀️';
+  --light-bg-pattern: url('../assets/img/light-triangle.webp');
+
+  /* Dark mode */
+  --dark-text: #f7f7f7;
+  --dark-bg: #222430;
+  --dark-theme: #A5C9CA;
+  --dark-bg-blur: rgba(34, 36, 48 0.05);
+  --dark-topnav: #222430;
+  --dark-shadow: rgb(0, 0, 0);
+  --dark-icon: '🌑';
+  --dark-bg-pattern: url('../assets/img/dark-triangle.webp');
+
+  /* Default mode */
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+  --theme-color: var(--light-theme);
+  --bg-blur: var(--light-bg-blur);
+  --topnav-color: var(--light-topnav);
+  --shadow-color: var(--light-shadow);
+  --theme-icon: var(--light-icon);
+  --bg-pattern: var(--light-bg-pattern);
+}
+
+#theme-switch{
+  display: none;
+}
+
+#theme-switch:checked ~ .parent, #theme-switch:checked ~ .topnav{
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --theme-color: var(--dark-theme);
+  --bg-blur: var(--dark-bg-blur);
+  --topnav-color: var(--dark-topnav);
+  --shadow-color: var(--dark-shadow);
+  --theme-icon: var(--dark-icon);
+  --bg-pattern: var(--dark-bg-pattern);
+}
+
 html {
   padding: 0;
   margin: 0;
-  background: url(../assets/img/triangle2.webp);
   color: black;
   scroll-behavior: smooth;
 }
@@ -17,11 +63,11 @@ section {
   scroll-snap-align: start;
   position: relative;
   padding: 50px 0;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-blur);
   border-radius: 16px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 a{
@@ -50,10 +96,12 @@ input::placeholder, textarea::placeholder{
 
 .parent {
   overflow: scroll;
-  /* height: 100vh; */
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   padding: 0 10%;
+  background: var(--bg-pattern);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .parent::-webkit-scrollbar {
@@ -66,6 +114,67 @@ input::placeholder, textarea::placeholder{
   scrollbar-width: none; /* Firefox */
 }
 
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  top: 7rem;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #395B64;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: var(--theme-icon);
+  font-size: 2.5rem;
+  height: 26px;
+  width: 26px;
+  left: -1rem;
+  bottom: .7rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#theme-switch:checked ~ .parent > #about > .hero__section1 > label > .slider {
+  background-color: #A5C9CA;
+}
+
+input:focus ~ .parent > #about > .hero__section1 > label > .slider {
+  box-shadow: 0 0 1px #A5C9CA;
+}
+
+input:checked ~ .parent > #about > .hero__section1 > label > .slider:before {
+  -webkit-transform: translateX(2rem);
+  -ms-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 /* CSS Menu 
     1. Typography
     2. Top Navigation
@@ -73,6 +182,7 @@ input::placeholder, textarea::placeholder{
     4. Skill Section
     5. Work Section
     6. Education Section
+    7. Tab Bar
 */
 
 /* -- Typography -- */
@@ -83,7 +193,7 @@ input::placeholder, textarea::placeholder{
 .heading1 {
   display: inline-block;
   font-size: 3rem;
-  border-bottom: #395b64 dashed 2px;
+  border-bottom: var(--theme-color) dashed 2px;
   padding-bottom: 5px !important;
 }
 
@@ -103,7 +213,7 @@ input::placeholder, textarea::placeholder{
   justify-content: space-between;
   padding: 25px 0;
   border-bottom: 1px solid gray;
-  background-color: white;
+  background-color: var(--topnav-color);
   z-index: 999;
 }
 
@@ -112,9 +222,13 @@ input::placeholder, textarea::placeholder{
   float: left;
 }
 
+.topnav__logo > a{
+  color: var(--text-color);
+}
+
 .topnav__item {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   padding: 0 25px;
   transition: 0.25s;
 }
@@ -186,7 +300,7 @@ input::placeholder, textarea::placeholder{
   padding: 10px 20px;
   margin: 20px 15px;
   background-color: #e7f6f2;
-  border-left: 2px solid #395b64;
+  border-left: 2px solid var(--theme-color);
 }
 
 .skill__item > ul {
@@ -329,7 +443,7 @@ input::placeholder, textarea::placeholder{
   align-items: center;
   font-size: larger;
   border-radius: 30px 0 0 30px;
-  color: black;
+  color: var(--text-color);
 }
 
 .contact__socmed_overlay{
@@ -338,7 +452,7 @@ input::placeholder, textarea::placeholder{
   bottom: 0;
   width: 30px;
   border-radius: 30px 0 0 30px;
-  background-color: #395b64;
+  background-color: var(--theme-color);
   transition: 0.5s;
 }
 
@@ -350,7 +464,7 @@ input::placeholder, textarea::placeholder{
   color: white;
 }
 
-.contact__socmed_icon{
+.contact__socmed_icon, .contact__socmed_icon_mobile{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -361,10 +475,15 @@ input::placeholder, textarea::placeholder{
   width: 25px;
   height: 25px;
   z-index: 100;
+  background-color: #A5C9CA;
+}
+
+.contact__socmed_icon > i, .contact__socmed_icon_mobile > i{
+  color: black;
 }
 
 .contact__socmed_item > p{
-  color: black;
+  color: var(--text-color);
   z-index: 100;
 }
 
@@ -389,7 +508,7 @@ input::placeholder, textarea::placeholder{
   position: fixed;
   bottom: 10px;
   left: 0;
-  background-color: white;
+  background-color: var(--topnav-color);
   border: 1px dashed #A5C9CA;
   padding: 10px 0;
   width: 100%;
@@ -406,7 +525,7 @@ input::placeholder, textarea::placeholder{
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  background-color: #E7F6F2;
+  background-color: #A5C9CA;
   height: 30px;
   width: 30px;
   padding: 10px;

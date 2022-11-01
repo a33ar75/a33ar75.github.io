@@ -12,11 +12,11 @@
 }
 
 .text-primary{
-    color: #395B64;
+    color: var(--theme-color);
 }
 
 .text-primary-300{
-    color: #A5C9CA;
+    color: var(--theme-color);
 }
 
 .text-primary-100{
@@ -190,7 +190,7 @@
 .btn:hover{
     transform: translateY(-3px);
     cursor: pointer;
-    box-shadow: 4px 5px 10px rgb(200, 200, 200);
+    box-shadow: 4px 5px 10px var(--shadow-color);
 }
 
 .text-none{
