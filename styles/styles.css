@@ -147,7 +147,7 @@ input::placeholder, textarea::placeholder{
   height: 26px;
   width: 26px;
   left: -1rem;
-  bottom: .7rem;
+  bottom: .6rem;
   -webkit-transition: .4s;
   transition: .4s;
 }
